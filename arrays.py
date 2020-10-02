@@ -29,3 +29,28 @@ def find_numbers(nums):
             count_of_even += 1
     return count_of_even
 
+
+# -------------------------------------------------------------------------------------------#
+# 3. Given an array of integers A sorted in non-decreasing order, return an array of the squares
+# of each number, also in sorted non-decreasing order.
+# Input: [-4,-1,0,3,10]
+# Output: [0,1,9,16,100]
+def sorted_squares(A):
+    new_Arr = []
+    for element in A:
+        A_sqr = element * element
+        new_Arr.append(A_sqr)
+        new_Arr.sort()
+    return new_Arr.sort()
+
+
+# A = [-4, -1, 0, 3, 10]
+# print(sortedSquares(A))
+def sorted_squares_two(A):
+    pos = []
+    neg = []
+    for element in A:
+        (neg, pos)[element >= 0].append(element * element)
+        new = (neg + pos)
+        new.sort()
+    return new
