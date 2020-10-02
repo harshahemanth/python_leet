@@ -54,3 +54,11 @@ def sorted_squares_two(A):
         new = (neg + pos)
         new.sort()
     return new
+
+
+def efficient_sorted_squares(A):
+    new = sorted([element * element for element in A])
+    return new
+
+# A = [-4, -1, 0, 3, 10]
+# print(efficient_sorted_squares(A))
