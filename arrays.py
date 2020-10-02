@@ -11,7 +11,7 @@ def get_max_length(nums):
         else:
             count += 1
             maximum_count = max(maximum_count, count)
-    return maxximum_count
+    return maximum_count
 
 # Test Case: nums = [1, 0, 1, 1, 0, 1]
-#print(get_max_length(nums))
+# print(get_max_length(nums))
